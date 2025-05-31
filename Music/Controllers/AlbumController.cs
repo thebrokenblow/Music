@@ -12,7 +12,7 @@ public class AlbumController(IAlbumRepository albumRepository) : Controller
         return View(albums);
     }
 
-    public async Task<IActionResult> Details(int id)
+    public async Task<IActionResult> Details(int id, string name)
     {
         var album = await albumRepository.GetDetailsByIdAsync(id);
 
